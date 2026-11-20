@@ -268,8 +268,10 @@ function priceLine(item) {
       return `<article class="card" data-id="${esc(item.id)}" data-price="${item.price}">
         ${hold ? `<div class="hold-flag">${holdLabel}</div>` : ""}
         <button class="card-open" type="button" data-open="${esc(item.id)}">
-          <span class="badges">${badges}</span>
-          <img src="${esc(item.image)}" alt="${esc(item.alt)}" width="1152" height="864">
+          <span class="card-media">
+            <span class="badges">${badges}</span>
+            <img src="${esc(item.image)}" alt="${esc(item.alt)}" width="1152" height="864">
+          </span>
           <span class="card-body">
             <span class="kicker">${esc(item.sub)}</span>
             <h3>${esc(item.name)}${item.asterisk ? '<sup class="star">*</sup>' : ""}</h3>
